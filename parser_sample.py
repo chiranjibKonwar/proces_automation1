@@ -13,15 +13,24 @@ def createParser():
 
     parser = OptionParser(usage=usage, epilog=epilog)
 
+    
+    #KMK what is this annotation file
     parser.add_option("-a", "--annot_filee", dest="annot_file",
                       help='the annotation file [REQUIRED]')
 
+    #KMK what is sample file
     parser.add_option("-s", "--sample", dest="sample_file",
                       help='the sample file with annotaiton [REQUIRED]')
+    
+    #KMK what are the parameters required, and add the options accordingly
+    
 
 def main(argv, errorlogger = None, runstatslogger = None):
     global parser
     (opts, args) = parser.parse_args(argv)
+    
+    
+  
 
 if __name__ == "__main__":
     createParser()
